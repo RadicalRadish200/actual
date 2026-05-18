@@ -77,6 +77,12 @@ export type AverageTemplate = {
 export type CopyTemplate = {
   type: 'copy';
   lookBack: number;
+  limit?: {
+    amount: number;
+    hold: boolean;
+    period: 'daily' | 'weekly' | 'monthly';
+    start?: string;
+  };
 } & BaseTemplateWithPriority;
 
 export type RemainderTemplate = {
